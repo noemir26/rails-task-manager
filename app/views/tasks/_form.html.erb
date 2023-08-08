@@ -1,0 +1,11 @@
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control m-2 p-2"%>
+  <%= f.label :details %>
+  <%= f.text_field :details, class: "form-control m-2 p-2"%>
+  <% unless @task.id.nil? %>
+    <%= f.check_box :completed %>
+    <%= f.label :completed %>
+  <% end %>
+  <%= f.submit class: "btn btn-primary mt-2" %>
+<% end %>

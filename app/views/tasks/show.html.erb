@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<p class="alert alert-secondary p-3 my-2"><%= @task.details %></p>
+<% if @task.completed == true %>
+  <p class="alert alert-success p-2 my-2">This task has been completed</p>
+<% else %>
+  <p class="alert alert-danger p-2 my-2">This task hasn't been completed</p>
+<% end %>
+<div class="buttons d-flex justify-content-between">
+  <button class="btn btn-primary w-50 m-2"><%= link_to "Back to tasks list 🗒️", tasks_path, class: "text-decoration-none text-light" %></button>
+  <button class="btn btn-primary w-50 m-2"><%= link_to "Edit Task ✍️", edit_task_path, class: "text-decoration-none text-light" %></button>
+</div>
